@@ -12,7 +12,7 @@ export default function Login() {
     if (!email || !password) return setError("All fields are required.");
 
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch("https://netflix-backend-express-production.up.railway.app/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
